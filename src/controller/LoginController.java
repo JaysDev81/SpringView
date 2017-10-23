@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.sun.net.httpserver.Authenticator;
 
 @Controller
 @RequestMapping("/login/login.do")
@@ -36,15 +35,16 @@ public class LoginController {
 				}
 				try {
 						authenticator.authenticate(loginCommand.getId(), loginCommand.getPassword());
+
 						return "loginSuccess";
 				} catch (AuthenticationException ex) {
-						result.reject("invalidOrPassword", new Object[] { loginCommand.getId() }, null);
+						result.reject("invalidIdOrPassword", new Object[] { loginCommand.getId() }, null);
 						return "loginForm";
 				}
 		}
 		
 		@ModelAttribute("loginTypes")
-		protected List<String> referenceDate() throws Exception {
+		protected List<String> referenceData() throws Exception {
 				List<String> loginTypes = new ArrayList<String>();
 				loginTypes.add("일반회원");
 				loginTypes.add("기업회원");
