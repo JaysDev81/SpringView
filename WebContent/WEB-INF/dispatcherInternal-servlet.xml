@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8"?>
 
 <beans xmlns="http://www.springframework.org/schema/beans"
@@ -35,3 +36,6 @@
 	   					   
 </beans>
 	   					   
+=======
+<?xml version="1.0" encoding="UTF-8"?>
+>>>>>>> 052b8841651d574ef0cf5d2d35653268ed48cccf
