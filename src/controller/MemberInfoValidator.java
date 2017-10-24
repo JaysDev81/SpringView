@@ -11,7 +11,7 @@ public class MemberInfoValidator implements Validator {
 			ValidationUtils.rejectIfEmptyOrWhitespace(errors, "userId", "required");
 			ValidationUtils.rejectIfEmptyOrWhitespace(errors, "name", "required");
 			ValidationUtils.rejectIfEmptyOrWhitespace(errors, "address.address1", "required");
-			ValidationUtils.rejectIfEmptyOrWhitespace(errors, "address.adress2", "required");
+			ValidationUtils.rejectIfEmptyOrWhitespace(errors, "address.address2", "required");
 			ValidationUtils.rejectIfEmptyOrWhitespace(errors, "jobCode", "required");
 			
 			MemberInfo memberInfo = (MemberInfo) target;

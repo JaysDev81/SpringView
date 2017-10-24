@@ -33,7 +33,7 @@
 			<form:label path="jobCode">직업</form:label>
 			<form:select path="jobCode">
 						<option value="">--- 선택하세요 ---</option>
-						<form:options items="${jobCodes}" itmeLabel="label" itemValue="code" />
+						<form:options items='${jobCodes}' itmeLabel="label" itemValue="code" />
 			</form:select>
 			<form:errors path="jobCode" />
 		</p>
